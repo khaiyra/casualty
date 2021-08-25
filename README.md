@@ -5,3 +5,13 @@ The objective of this project is to
 * Merge machine learning with causal inference.
 
 ## Folders
+Folder structure of the project.
+
+data:
+
+notebook:
+This folder contain notebooks files that are necessary for data exploration and to get more indepth analysis on the data set.
+* DataExploration: Notebook file for making exploratory data analysis and help us understand more about the data.
+
+scripts:
+
