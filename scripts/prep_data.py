@@ -1,6 +1,5 @@
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
-#from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import StandardScaler
 
 
@@ -10,7 +9,9 @@ def drop_columns():
 
 #prepare data for modelling
 def feature_scaling(data:pd.DataFrame,col1:str):
-    data[col1].replace(to_replace = dict(M = 0, B = 1), inplace = True)
+    dle = LabelEncoder()
+    
+    data[col1] = le.fit_transform(data[col1])
     
     cols = data.columns.to_list()
     if col1 in cols:
