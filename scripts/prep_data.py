@@ -9,7 +9,7 @@ def drop_columns():
 
 #prepare data for modelling
 def feature_scaling(data:pd.DataFrame,col1:str):
-    dle = LabelEncoder()
+    le = LabelEncoder()
     
     data[col1] = le.fit_transform(data[col1])
     
