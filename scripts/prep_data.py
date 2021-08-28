@@ -5,9 +5,8 @@ from sklearn.preprocessing import StandardScaler
 
 
 # Drop column
-def drop_columns(df, col1:str, col2:str):
+def drop_columns():
     df = df.drop([col1,col2],axis=1)
-    return df
 
 #prepare data for modelling
 def feature_scaling(data:pd.DataFrame,col1:str):
@@ -26,5 +25,6 @@ def feature_scaling(data:pd.DataFrame,col1:str):
 
 # Save data
 def to_csv(df):
-    df.to_csv('../data/clean_data.csv',index=False)
+    df.to_csv('../data/processed_data.csv',index=False)
+    print('Data saved successfully...')
 
